@@ -1,0 +1,284 @@
+Στο κεφάλαιο αυτό εξετάζουμε τη βαρυτική δράση του Einstein και τη σύζευξη της βαρύτητας με τα ηλεκτρομαγνητικά πεδία. 
+%είναι η καθολικότητα της βαρύτητας ως προς κάθε μορφή ενέργειας. 
+Όλες οι μορφές ύλης και ακτινοβολίας υπόκεινται στην επίρροια της βαρύτητας. Εξάλλου, το βαρυτικό πεδίο ταυτίζεται με τον καμπυλωμένο χωρόχρονο.
+
+\section{Η Αρχή της Ισοδυναμίας}
+Στο κεφάλαιο \ref{chaptertensorcal}, αναφερθήκαμε στην αρχή της ισοδυναμίας του Einstein και αποδείξαμε ότι μια αρκετά μικρή χωροχρονική περιοχή, ανεξάρτητα από την παρουσία βαρυτικού πεδίου, μπορεί να περιγραφεί ως τμήμα του χωροχρόνου Minkowski και να επικαλυφθεί με ένα (τοπικά) αδρανειακό σύστημα αναφοράς συντεταγμένων. Ταυτόχρονα, σύμφωνα με την αρχή της ισοδυναμίας, σε μια μικρή περιοχή του χωροχρόνου, στο σύστημα αναφοράς παρατηρητή που πέφτει ελεύθερα, οι βαρυτικές δυνάμεις εξουδετερώνονται από αδρανειακές και οι νόμοι της φυσικής περιγράφονται με βάση τις αρχές της ειδικής θεωρίας της σχετικότητας. Στο τοπικά αδρνειακό σύστημα αναφοράς, η μετρική είναι η μετρική Minkowski. 
+%γεωμετρία της υπόβαθρης πολλαπλότητας, πρέπει να προσεγγίζει αυτή του χωροχρόνου Minkowski
+%\begin{equation*}\label{minkapprox}
+%     ds^2 \approx \mink{\mu}{\nu} %dx\indices{^\mu}dx\indices{^\nu} 
+%\end{equation*}
+%στο προαναφερόμενο όριο. Για παράδειγμα, μια τέτοια μικρή %χωροχρονική περιοχή αντιστοιχεί σε έναν ανελκυστήρα ελεύθερο να %κινηθεί υπό την επίδραση του βαρυτικού πεδίου της γης, για %μικρό χρονικό διάστημα. Εντός του ανελκυστήρα, δύο ελεύθερα %σωματίδια τοποθετημένα στο κάτω και πάνω μέρος του ανελκυστήρα, %αφήνονται να κινηθούν στο εσωτερικό. Σύμφωνα με την αρχή, ως %προς το σύστημα αναφοράς του ανελκυστήρα, τα σωματίδια είναι %ακίνητα για ένα μικρό χρονικό διάστημα. 
+Σε μεγαλύτερες περιοχές, η καμπυλότητα του χωροχρόνου και τα βαρυτικά φαινόμενα δεν μπορούν να αμεληθούν και 
+%να κινείται για μεγάλους χρόνους, το σύστημα %ανελκυστήρα-σωματίδια, δεν συμπίπτει πλέον με ένα μικρό %χωροχρονικό χωρίο, και 
+έτσι, γίνονται παρατηρήσιμα τα παλιρροιακά φαινόμενα. 
+%Τα σωματίδια, ως προς το σύστημα του ανελκυστήρα, θα %απομακρύνονται, το ένα κινούμενο προς τα πάνω και το άλλο προς %τα κάτω. 
+%\\ \\
+%Τέλος, δικαιώνεται η σύντομη συζήτηση περί pseudo-Riemannian %πολλαπλότητες που έγινε στην ενότητα \ref{sec_localcartcoor}. Η %μετρική μιας πολλαπλότητας Riemann, όντας θετικά ορισμένη, δεν %μπορεί να προσεγγίσει την μετρική Minkowski με αρνητικές %ιδιοτιμές. Οδηγούμαστε λοιπόν, σε pseudo-Riemannian γεωμετρίες. %
+%\begin{equation}
+%    ds^2 \,=\, \g{\mu}{\nu} dx\indices{^\mu}dx\indices{^\nu} %\left\{ \begin{array}{c}
+%         \le 0 \\
+%         > 0
+%    \end{array} \right.
+%\end{equation}
+
+\section{Δράση}
+Οι εξισώσεις του Einstein στην παρουσία ηλεκτρομαγνητικών πεδίων απορρέουν από την δράση Einstein-Hilbert, $S\subscr{H}$, και τη δράση Maxwell $S\subscr{M}$ (στην απουσία φορτισμένης ύλης):
+\begin{equation}\label{actionEH}
+    S \,=\, S\subscr{H}\,+\,S\subscr{M} \,=\,\int \left( \frac{R}{16\pi G}-\frac{1}{4}F\subscr{\mu\nu} F\subscr{\alpha\beta}g\superscr{\mu\alpha}g\superscr{\nu\beta} \right)\sqrt{-g}\,d\superscr{4}x 
+\end{equation}
+Η μετρική $\g{\mu}{\nu}$, το ηλεκτρικό και το μαγνητικό πεδίο ικανοποιούν τις εξισώσεις Euler-Lagrange. Ο ηλεκτρομαγνητικός τανυστής $F\subscr{\mu\nu}$ ορίζεται ως η στροφή του ηλεκτρικού τετραδυναμικού 
+\begin{equation*}
+    F\subscr{\mu\nu} = \partial\subscr{\mu} A\subscr{\nu} - \partial\subscr{\nu} A\subscr{\mu}
+\end{equation*}
+ώστε να ικανοποιούνται οι ομογενείς εξισώσεις του Maxwell.
+%με έξι ανεξάρτητα στοιχεία και μηδενική συναλλοίωτη απόκλιση %(ομογενής εξισώσεις Maxwell)
+%\begin{equation*}
+%    \g[i]{\rho}{\mu}\nabla\subscr{\rho} F\subscr{\mu\nu} \,=\, %0
+%\end{equation*}
+%Λόγω της αντισυμμετρικότητας του $F\subscr{\mu\nu}$, η %αντικατάσταση των μερικών παραγώγων με συναλλοίωτες παραγώγους %-όπως απαιτεί, άλλωστε, η αναγωγή τανυστικών εξισώσεων από %ειδική σε γενική σχετικότητα- δεν αλλάζει τη μορφή του.
+
+\section{Μεταβολή δράσης}
+%Η γεωμετρία του χωροχρόνου καθορίζεται, βελτιστοποιώντας το %συναρτησιακό \eqref{actionEH} ως προς τη μετρική %$\g{\mu}{\nu}$. 
+Μια απειροστά μικρή μεταβολή της μετρικής 
+\begin{equation*}
+    \g{\mu}{\nu} \rightarrow \g{\mu}{\nu}\,+\,\de\g{\mu}{\nu}
+\end{equation*}
+μεταβάλλει τη δράση κατά
+\begin{equation}\label{actionvar}
+    \de\subscr{g} S \,=\, \de\subscr{g} S\subscr{H} \,+\, \de\subscr{g} S\subscr{M}
+\end{equation}
+%όπου ο δείχτης g υποδεικνύει την εν λόγο μεταβολή έναντι άλλων %μεταβολών όπως, παραδείγματος χάριν, αυτήν ως προς το δυναμικό %βαθμίδος $A\superscr{\mu}$. Ο δείχτης θα παραλειφθεί στα %ακόλουθα για αποφυγή συνοστισμού. 
+Ο πρώτος όρος της \eqref{actionvar} ισούται με
+\begin{equation}
+    \de S\subscr{H} \,=\, \int\left( \de g\superscr{\mu\nu}R\subscr{\mu\nu}\sqrt{-g} \,+\,  g\superscr{\mu\nu}\de R\subscr{\mu\nu}\sqrt{-g} \,+\, g\superscr{\mu\nu}R\subscr{\mu\nu}\de \sqrt{-g}\right)\,d\superscr{4}x 
+\end{equation}
+Στο παράρτημα \ref{EHvar} δείχνουμε ότι 
+\begin{equation*}
+    \de S\subscr{H} \,=\, \int\left( \frac{\R{\mu}{\nu} - \frac{1}{2}R\g{\mu}{\nu}}{16\pi G} \right)\, \de \g[i]{\mu}{\nu}\,\sqrt{-g}\,d\superscr{4}x 
+\end{equation*}
+Μεταβάλλοντας τη δράση Maxwell, ακολουθώντας τα σχετικά βήματα του παραρτήματος \ref{Maxwvar}, παίρνουμε
+\begin{equation*}
+    \de S\subscr{M} \,=\, \int\left( -\frac{1}{2}F\subscr{\mu\alpha} F\subscr{\nu\beta}\g[i]{\alpha}{\beta} + \frac{1}{8}F^2 \g{\mu}{\nu} \right)\, \de \g[i]{\mu}{\nu}\,\sqrt{-g}\,d\superscr{4}x 
+\end{equation*}
+%Ακολουθώντας το λογισμό μεταβολών, η βελτιστοποίηση του %συναρτησιακού της δράσης απαιτεί 
+Απαιτώντας η δράση να είναι οριακή,
+\begin{equation*}
+    \frac{1}{\sqrt{-g}}\frac{\de S}{\de \g[i]{\mu}{\nu}} \,=\, 0
+\end{equation*}
+καταλήγουμε στις εξισώσεις Euler-Lagrange, ή στις εξισώσεις Einstein, για τη μετρική
+\begin{equation}\label{elequations}
+    \R{\mu}{\nu} - \frac{1}{2}R\g{\mu}{\nu} \,=\, 8\pi G\left(F\subscr{\mu\alpha} F\subscr{\nu\beta}\g[i]{\alpha}{\beta} - \frac{1}{4}F^2 \g{\mu}{\nu} \right)
+\end{equation}
+
+\section{Βαρυτικές Εξισώσεις}
+Στο δεξιό μέλος της \eqref{elequations} εμφανίζεται ο τανυστής ενέργειας-ορμής, $T\subscr{\mu\nu}$, των ηλεκτρομαγνητικών πεδίων 
+\begin{equation}\label{energy_mom_tensor}
+    T\subscr{\mu\nu} \,:=\, F\subscr{\mu\alpha} F\subscr{\nu\beta}\g[i]{\alpha}{\beta} - \frac{1}{4}F^2 \g{\mu}{\nu}
+\end{equation}
+ο οποίος έχει μηδενική συναλλοίωτη απόκλιση
+\begin{equation*}
+    \g[i]{\rho}{\mu}\nabla\subscr{\rho}T\subscr{\mu\nu} \,=\, 0
+\end{equation*}
+Στη συνέχεια, βρίσκουμε το ίχνος των δύο μελών της εξίσωσης Einstein, πολλαπλασιάζοντας με τον αντίστροφο της μετρικής $\g[i]{\mu}{\nu}$ και χρησιμοποιώντας τη σχέση $\g[i]{\mu}{\nu}\g{\mu}{\nu}=4$. Με βάση το αποτέλεσμα $R=-8\pi G T$, οι βαρυτικές εξισώσεις του Einstein ανάγονται στην ακόλουθη βοηθητική μορφή
+\begin{equation}\label{einstein equations}
+    \R{\mu}{\nu} \,=\, 8\pi G\left( T\subscr{\mu\nu} -\frac{1}{2}T\g{\mu}{\nu} \right)
+\end{equation}
+Στην απουσία φορτισμένης ύλης το ίχνος του τανυστή της ενέργειας-ορμής των ηλεκτρομαγνητικών πεδίων μηδενίζεται και έτσι
+\begin{equation}
+    \R{\mu}{\nu} \,=\, 8\pi G T\subscr{\mu\nu} 
+\end{equation}
+%\newpage
+
+Οι λύσεις των βαρυτικών εξισώσεων στην παρουσία ηλεκτρομαγνητικών πεδίων προσδιορίζουν τις $10$ ανεξάρτητες συνιστώσες του μετρικού τανυστή $\g{\mu}{\nu}$.
+
+
+\section{Στατικές και σφαιρικά συμμετρικές λύσεις}
+θα βρούμε στατικές και σφαιρικά συμμετρικές λύσεις. 
+%που να είναι, πρώτον στατικές, αμετάβλητες δηλαδή ως προς %χρονικές μετατοπίσεις και αναστροφές. 
+Έτσι, κάθε στοιχείο της μετρικής πρέπει να είναι ανεξάρτητο της χρονικής συντετραγμένης, και θέτουμε 
+%η μορφή της μετρικής περιορίζεται με το μηδενισμό των όρων 
+\begin{equation*}
+\g{0}{1},\,\g{0}{2},\,\dots\,=\,0
+\end{equation*}
+Η χρονική συνιστώσα της μετρικής, $\g{0}{0}$, είναι διάφορη από μηδέν. 
+%Τα σύνολα των σημείων του χωροχρόνου με σταθερή χρονική και %ακτινική συνιστώσα καθορίζονται από τις πολικές συντεταγμένες %(θ,φ) και συνιστούν 2-σφαίρες στον τρισδιάστατο χώρο. Οι %2-σφαίρες είναι συμμετρικές ως προς χωρικές περιστροφές. Αυτή η %ιδιότητα, οδηγεί στον μηδενισμό όρων με συνδυασμούς των χωρικών %συντεταγμένων
+%\begin{equation*}
+%    \g{1}{2},\,\g{2}{3},\,\dots\,=\,0
+%\end{equation*}
+Χρησιμοποιώντας σφαιρικές συντεταγμένες για το χώρο, μπορεί να αποδειχθεί ότι η πιο γενική, σφαιρικά συμμετρική μετρική παίρνει την ακόλουθη μορφή \cite{Weinberg:100595}: 
+%γίνεται λεπτομερής μελέτη χωροχρόνων με υποχώρους πλήρης %συμμετρικότητας και αποδεικνύονται τα πάραπάνω. Τα στοιχεία της %μετρικής που επιβιώνουν τους παραπάνω περιορισμούς είναι τα %διαγώνια. Παραλείποντας τις εξειγήσεις που δείνει στο βιβλίο %του ο Weinberg καταλήγουμε στην μετρική
+\begin{equation}\label{metric_first_form}
+    ds^2 \,=\, -e^{2a(r)}\,dt^2 \,+\, e^{2b(r)}\,dr^2 \,+\, r^2\,(d\theta^2 + \sin\superscr{2}\theta\,d\phi^2)
+\end{equation}
+%Είναι βοηθητικό αλλά όχι απαραίτητο να επιβάλουμε οι a και b να %είναι θετικές περιορίζοντας τις σε εκθετικές συναρτήσεις της r. Έτσι, διατηρείται η ταυτότητα της μετρικής, (-+++)
+%\begin{equation}
+%    g\subscr{\mu\nu}\,:=\,diag\left(-e^{2a(r)},\,e^{2b(r)},\,r^%2,\,r^2\sin\superscr{2}\theta\right)
+%\end{equation}
+%Λόγω του μεγάλου όγκου πράξεων, 
+Οι υπολογισμοί γίνονται με τη βοήθεια του λογισμικού Wolfram Mathematica και παρουσιάζοναι στο παράρτημα \ref{mathematica}. Στον κώδικα \ref{mathematica_position_n_metric} ορίζουμε τη μετρικής σύμφωνα με την \eqref{metric_first_form}, στις συντεταγμένες $x\superscr{\mu}=(t,r,\theta,\phi)$. Στη συνέχεια, προσδιορίζουμε τα σύμβολα Christoffel (κώδικας \ref{mathematica_chr_symbols})
+\begin{equation}\label{christoffel symbols identity}
+    \Gamma\indices{^\sigma_\mu_\nu} \,=\, \frac{1}{2}\g[i]{\sigma}{\rho}\left( \partial\subscr{\mu}\g{\nu}{\rho} + \partial\subscr{\nu}\g{\rho}{\mu} - \partial\subscr{\rho}\g{\mu}{\nu} \right)
+\end{equation}
+Έχοντας βρει τα στοιχεία της σύνδεσης, προσδιορίζουμε τον τανυστή καμπυλότητας Riemann με βάση τη σχέση 
+\begin{equation}
+    \R[\rho]{\mu}[\lambda]{\nu} \,=\, \partial\subscr{\lambda}\Gamma\superscr{\rho}\subscr{\;\;\mu\nu} \,+\, \Gamma\superscr{\rho}\subscr{\;\;\lambda\sigma}\Gamma\superscr{\sigma}\subscr{\;\;\mu\nu} \,-\, \partial\subscr{\nu}\Gamma\superscr{\rho}\subscr{\;\;\mu\lambda} \,-\, \Gamma\superscr{\rho}\subscr{\;\;\nu\sigma}\Gamma\superscr{\sigma}\subscr{\;\;\mu\lambda}
+\end{equation}
+τρέχοντας τον κώδικα \ref{mathematica_Riemann}. Στις εξισώσεις Einstein εμπλέκεται ο τανυστής Ricci, ο οποίος αποτελεί ίχνος του τανυστή Riemann, κώδικας \ref{mathematica_Ricci}
+\begin{equation}
+    \R{\mu}{\nu}\,:=\,\R[\lambda]{\mu}[\lambda]{\nu}
+\end{equation}
+Στη συνέχεια βρίσκουμε τον ηλεκτρομαγνητικού τανυστή και τον τανυστή ενέργειας-ορμής \eqref{energy_mom_tensor}.
+
+\section{Ηλεκτρομαγνητικός τανυστής}
+Στη διατριβή αυτή θα μελετήσουμε μαγνητικά φορτισμένες μελανές οπές και διάφορα φυσικά φαινόμενα που συνδέονται με αυτές \cite{Maldacena_2021}. Ο ηλεκτρομαγνητικός τανυστής πρέπει να περιγράφει το ακτινικό μαγνητικό πεδίο μαγνητικού μονοπόλου. Το μαγνητικό φορτίο είναι κβαντωμένο με βάση τη συνθήκη κβάντωσης Dirac \eqref{quantum magnetic charge}. Στην εξωτερική περιοχή του ορίζοντα, έχει την ακόλουθη διανυσματική μορφή 
+\begin{equation*}
+    \vec{B} \,=\, \frac{q\subscr{m}\vec{r}}{r\superscr{3}}
+\end{equation*}
+Αντικαθιστούμε το φορτίο $q\subscr{m}$ με ακέραιο πολλαπλάσιο του στοιχειώδους μαγνητικού κβάντου\footnote{Στις μονάδες Planck θέτουμε $\hbar=c=1$}, \eqref{quantum magnetic charge}, και έχουμε
+\begin{equation*}
+    \vec{B}\,=\,\frac{Q\vec{r}}{2er^3}
+\end{equation*}
+Η συνολική μαγνητική ροή ισούται με
+\begin{equation*}
+    \oint\vec{B}\cdot d\vec{s} = \frac{2\pi}{e}Q
+\end{equation*}
+Με χρήση της σχέσης \cite{Carroll2003-CARSAG-3}  
+\begin{equation}
+    B\superscr{r}=\epsilon\superscr{tr\mu\nu}F\subscr{\mu\nu}=\frac{\epsilon\superscr{rjk}}{\sqrt{-g}}F\subscr{jk}
+\end{equation}
+βρίσκουμε τα μη μηδενικά στοιχεία του ηλεκτρομαγνητικού τανυστή $F\subscr{\mu\nu}$
+\begin{equation}\label{def of em tensor}
+    \begin{split}
+        &F\subscr{0i} \,=\, 0\\
+        &F\subscr{jk} \,=\, -F\subscr{kj} \,=\,\left\{\begin{array}{c}
+             \frac{Q}{2e}\sin\theta,\quad \text{\scalebox{0.7}{$j=\theta,\,\,k=\phi $}} \\
+             0,\quad \text{\scalebox{0.7}{ υπόλοιπα}}
+        \end{array} \right.
+    \end{split}
+\end{equation}
+
+Έχοντας λοιπόν, τον τανυστή \eqref{def of em tensor}, προσδιορίζουμε τον τανυστή της ενέργειας - ορμής \eqref{energy_mom_tensor}, κώδικας \ref{mathematica energy momentum tensor}. 
+
+%Βρίσκουμε στη συνέχεια το ίχνος Τ του τανυστή ενέργειας-ορμής %με τον κώδικα \ref{mathematica trace of ene mom ten} και τέλος %κατασκευάζουμε το δεξιό μέλος της \ref{einstein equations}, %κώδικας \ref{mathematica rs of einstein eq}. Το %ηλεκτρομαγνητικό πεδίο, που θα χρησιμοποιηθεί στο κβαντικό %πλαίσιο της ενότητας \ref{section dirac equation in gravity}, %δίνεται από τη συνιστώσα $A\subscr{\phi}$
+%\begin{equation}\label{vector potential for monopole in %curvilinear coo}
+%    A\subscr{\phi}=\frac{Q}{2e}\cos\theta
+%\end{equation}
+
+\section{Λύσεις εξισώσεων Einstein}
+Έχουμε στην κατοχή μας όλα τα τανυστικά μεγήθη για να καταστρώσουμε τις εξισώσεις του Einstein \eqref{einstein equations}. Καταλήγουμε σε ένα σύστημα τεσσάρων εξισώσεων, που παρουσιάζονται τρέχοντας τον κώδικα \ref{mathematica system of einstein equations}. Υπάρχει μία εξίσωση δηλαδή για κάθε διαγώνιο στοιχείο του τανυστή Ricci   
+\begin{equation}
+    \begin{split}
+        &\{tt\}\,:\quad -e^{2b}A + r\superscr{3}\left( a'(2+ra'-rb')+ra'' \right)\,=\,0\\
+        &\{rr\}\,:\quad e^{2b}A + r\superscr{3}\left( 2b'+a'(-ra'+rb')-ra'' \right) \,=\,0 \\
+        &\{\phi\phi\}\,:\quad  1 - \frac{A}{r^2} - e^{-2b}\left( 1 + ra' -rb' \right) = 0\\
+        &\{\theta\theta\}\,:\quad \{ \phi\phi \}
+    \end{split}
+\end{equation}
+όπου $A=\frac{G\pi Q^2}{e^2}$. Προσθέτουμε τις tt και rr εξισώσει, και παίρνουμε τη σχέση a' = -b'. Στη συνέχεια αντικαθιστούμε στην εξίσωση θθ και καταλήγουμε στην ακόλουθη διαφορική εξίσωση 
+\begin{equation}\label{differential equation for metric components}
+    2r\frac{db}{dr}+e^{2b}(1-\frac{A}{r\superscr{2}})-1=0
+\end{equation}
+Η λύση της \eqref{differential equation for metric components} παρουσιάζεται στο παράρτημα \ref{solution for metric dif eq}. Το αποτέλεσμα είναι 
+\begin{equation}
+    b(r) \,=\, -\frac{1}{2}\ln{\left(1-\frac{2G\pi Q^2}{e^2r}c+\frac{G\pi Q^2}{e^2r^2}\right)}
+\end{equation}
+όπου $c$ σταθερά, ανεξάρτητη της ακτινικής συντεταγμένης $r$. Για να βρούμε τη σταθερά αυτή, απαιτούμε να αναπαράγεται η μετρική Schwarzschild για μηδενικό αγνητικό φορτίο: 
+\begin{equation*}
+    Q\rightarrow 0 \quad \Rightarrow \quad \left(1-\frac{2G\pi Q^2}{e^2r}c+\frac{G\pi Q^2}{e^2r^2}\right)\rightarrow \left(1-\frac{2GM}{r}\right)\quad\Rightarrow \quad c=\frac{M e^2}{\pi Q^2 }
+\end{equation*}
+όπου $M$ η μάζα της μαύρης τρύπας.
+Με βάση τα πιο πάνω, καταλήγουμε στην μετρική Reissner-Nordström, με μη μηδενικό μαγνητικό φορτίο $Q$
+\begin{equation}\label{ReissnerNordmetric}
+    ds^2 \,=\, -B\,dt^2\,+\,B^{-1}\,dr^2+r^2\,d\Omega^2, \quad B(r)=1-\frac{2G M}{r}+\frac{G\pi Q^2}{e^2r^2}
+\end{equation}
+
+
+\section{Μελανές Οπές Reissner-Nordström}
+Στη μετρική \eqref{ReissnerNordmetric}, τα αντίθετα πρόσημα των δύο τελευταίων όρων οδηγούν σε ενδιαφέροντα χαρακτηριστικά. Πρώτον, υπάρχουν γενικά δύο ορίζοντες 
+%(έναντι του ενός στην περίπτωση της γεωμετρίας Schwarzschild) 
+στις ακτίνες
+\begin{equation}\label{horizon radius}
+    r_{\pm} = GM\left[1\pm\sqrt{1 - \frac{\pi Q^2}{Ge^2M^2}}\right]
+\end{equation}
+Δεύτερον, ο όρος της μάζας επιδρά διαφορετικά στη γεωμετρία της περιοχής του ορίζοντα σε σχέση με τον όρο του φορτίου εξαιτίας του αντίθετου προσήμου. Στον πίνακα \ref{table:mass to charge ratio} συνοψίζονται τα χαρακτηριστικά των ακόλουθων τριών ειδών φορτισμένων μελανής οπών. 
+%- περίσσεια φορτίου έναντι μάζας, περίσσεια μάζας έναντι %φορτίου και ισότητα. 
+Στη πρώτη περίπτωση, $GM^2<\pi Q^2/e^2$, εκδηλώνεται γυμνή ανωμαλία και περιοχές με μεγάλη καμπυλότητα, οι οποίες δεν μπορούν να περιγραφούν με βάση την κλασική θεωρία του Einstein για τη βαρύτητα. 
+%αν και φυσικά σωστή, π.χ. το ηλεκτρόνιο, δεν περιγράφεται από %τη κλασική σχετικότητα. \\
+Στη δεύτερη περίπτωση, $GM^2>\pi Q^2/e^2$, υπάρχουν δύο ορίζοντες σε ακτίνες $r\subscr{+}$ και $r\subscr{-}<r\subscr{+}$. Οι λύσεις αυτές εξετάζονται στη συνέχεια, και διερευνούμε την εξωτερική περιοχή κοντά στον ορίζοντα $r_+$. Η τρίτη περίπτωση, αφορά τις ακραίες μαύρες τρύπες οι οποίες ικανοποιούν την ισότητα $GM^2=\pi Q^2/e^2$. Στην περίπτωση αυτή οι δύο ορίζοντες ταυτίζονται $r\subscr{+}=r\subscr{-}$.
+
+\begin{table}[t]
+    \centering
+    \begin{tabular}{|p{4.5cm}|p{4.5cm}|p{4.5cm}|}
+            \hline
+            $GM^2 < \pi Q^2/e^2$ & $GM^2 > \pi Q^2/e^2$ & $GM^2 = \pi Q^2/e^2$\\
+            \hline
+            Γυμνή ανομαλία & Ορίζοντες στα $r_{\pm}$ & Ορίζοντας στο $r=r\subscr{e}\equiv GM$\\
+            $r$ πάντα χωροειδής & $r_-<r<r_+ \rightarrow$ $r$ χρονοειδής & $r$ πάντα χωροειδής \\
+            Χρονοειδείς τροχιές μπορούν να αποφύγουν την ανομαλία & $r<r_-\rightarrow$ $r$ χωροειδής & \\
+            \hline
+    \end{tabular}
+    \caption{\textit{Χαρακτηριστικά φορτισμένων μελανών οπών με βάση το πηλίκο της μάζας προς το φορτίο.}}
+    \label{table:mass to charge ratio}
+\end{table}
+
+%\newpage
+\section{Θερμοκρασία Hawking φορτισμένων οπών}
+Τα θερμοδυναμικά χαρακτηριστικά των φορτισμένων μελανών οπών εξάγονται με βάση τις αρχές της γενικής σχετικότητας και της κβαντομηχανικής \cite{Susskind:2005js}. Κοντά στον ορίζοντα $r\subscr{+}$, η 
+ακτινική απόσταση ρ σημείου $r$ της εξωτερικής περιοχής από τον ορίζοντα δίδεται από τη σχέση 
+%ελαφρώς μεγαλύτερο από $r\subscr{+}$ είναι
+\begin{equation}
+    \rho = \int\limits_{r\subscr{+}}^r \frac{r'dr'}{\sqrt{(r-r\subscr{+})(r-r\subscr{-})}}\approx 2r\subscr{+}\sqrt{\frac{r-r\subscr{+}}{r\subscr{+}-r\subscr{-}}}
+\end{equation}
+Αντικαθιστώντας στην \eqref{ReissnerNordmetric}, βρίσκουμε ότι η μετρική κοντά στον ορίζοντα $r\subscr{+}$ προσεγγίζεται από τη μετρική Rindler
+\begin{equation}\label{rindler metric close to horizon}
+    ds^2\approx -\rho^2 d\omega^2\,+\,d\rho^2 + r\subscr{+}^2 d\Omega^2 \quad\quad \omega\equiv\frac{r\subscr{+}-r\subscr{-}}{2r\subscr{+}^2}t
+\end{equation}
+Με τον ακόλουθο μετασχηματισμό συντεταγμένων
+\begin{equation}\label{coordinate tran from rindler to minkowski}
+    T=\rho\sinh{\omega}\qquad Z=\rho\cosh{\omega}\qquad X=r\subscr{+}\theta\cos\phi \qquad Y=r\subscr{+}\theta\sin\phi
+\end{equation}
+κοντά στο σημείο $\theta = 0$, επιτυγχάνουμε τη μετάβαση στο τοπικά ορισμένο αδρανειακό σύστημα συντεταγμένων $(T,\,Z,\,X,\,Y)$, κατάλληλο για να περιγράψει τις παρατηρήσεις ενός παρατηρητή που πέφτει ελεύθερα κοντά στον ορίζοντα $r\subscr{+}$. 
+%με τον Z άξονα του προσανατολισμένο ακτινικά στο $\theta=0$. 
+Σύμφωνα με την αρχή της ισοδυναμίας, ο μετασχηματισμός \eqref{coordinate tran from rindler to minkowski} αποτελεί το βαρυτικό ισοδύναμο της σχέσης μεταξύ ενός αδρανειακού συστήματος αναφοράς (στην απουσία βαρυτικού πεδίου) και ενός επιταχυνόμενου συστήματος αναφοράς, με σταθερή ομοιόμορφη επιτάχυνση. Ο παρατηρητής Schwarzschild διαγράφει υπερβολοειδή τροχιά από τη σκοπιά του παρατηρητή που πέφτει ελεύθερα.\\ 
+
+Σύμφωνα με το φαινόμενο Unruh, ο παρατηρητής Schwarzschild ανιχνεύει μια θερμική ατμόσφαιρα, με θερμοκρασία
+\begin{equation}
+    T(r{\scriptscriptstyle\gtrsim} r\subscr{+})\,=\,\frac{1}{2\pi}\frac{1}{\rho(r)}
+\end{equation}
+%Επικαλώντας και πάλι την αρχή της ισοδυναμίας, το φαινόμενο %Unruh αναθέτει θερμικό περιβάλλον στον μη αδρανειακό παρατηρητή %που βρίσκεται στάσιμος κοντά στον ορίζοντα της οπής. 
+Αρκετά μακριά από την μελανή οπή, η θερμοκρασία έχει σταθερή τιμή και ισούται με τη θερμοκρασία Hawking: 
+%Λόγω της διαστολής της χρονικής συντεταγμένης και της %αντίστοιχης ερυθρής μετατόπισης της συχνότητας $\nu\subscr{t}$ %των κβάντων ακτινοβολίας γύρω από την οπή (όπου t ο χρόνος %Schwarzschild)
+%\begin{equation*}
+%    \omega\,=\,\frac{r\subscr{+}-r\subscr{-}}{2r\subscr{+}^2}t %\quad\Rightarrow\quad %\nu\subscr{t}\,=\,\frac{r\subscr{+}-r\subscr{-}}{2r\subscr{+}^2%}\nu\subscr{\omega}
+%\end{equation*}
+%η θερμοκρασία Hawking είναι
+\begin{equation}\label{temp of black hole at a distance}
+    T(r\rightarrow\infty)\,=\,\frac{1}{2\pi}\frac{r\subscr{+}-r\subscr{-}}{2r\subscr{+}^2}
+\end{equation}
+Ένας στάσιμος παρατηρητής ατο άπειρο αντιλαμβάνεται τη μελανή οπή ως ένα μέλαν σώμα, με θερμοκρασία 
+%που δίνεται από την 
+\eqref{temp of black hole at a distance}. Στο όριο μιας ακραίας φορτισμένης οπής, οι δύο ορίζοντες $r\subscr{+}$ και $r\subscr{-}$ ταυτίζονται και η θερμοκρασία Hawking  μηδενίζεται. 
+
+\section{Μικρές αποκλίσεις από την ακραία μελανή οπή}
+Στο όριο $M\rightarrow \frac{\pi Q\superscr{2}}{Ge\superscr{2}}$, η θερμοκρασία τείνει στο μηδέν και η ακτινοβολία Hawking καταστέλλεται. Για μικρές αποκλίσεις της μάζας, αναμένεται αύξηση της θερμοκρασίας, και η οπή αρχίζει να ακτινοβολεί μέχρι που η μάζα να ελαττωθεί στην οριακή της τιμή. Για μικρές μεταβολές της μάζας, διατηρώντας το φορτίο σταθερό,
+\begin{equation}
+    M\subscr{e}\rightarrow M = M\subscr{e}+\de M,\qquad \de M << M\subscr{e}\superscr{2} = \pi Q^2/Ge^2
+\end{equation}
+παίρνουμε για την ακτίνα του εξωτερικού ορίζοντα $r\subscr{+}$ \eqref{horizon radius} 
+\begin{equation}
+    r\subscr{+} = GM\left[ 1+\sqrt{1-\frac{M\subscr{e}\superscr{2}}{M\superscr{2}}} \right]\quad \approx\quad GM\left[ 1+\sqrt{2\frac{\de M}{M\subscr{e}}} \right]
+\end{equation}
+και τη θερμοκρασία Hawking 
+\begin{equation}
+    T = \frac{1}{2\pi GM\subscr{e}}\sqrt{\frac{\de M}{M\subscr{e}}}\,+\,\mathcal{O}\left( \frac{\de M}{M\subscr{e}}\right)
+\end{equation}
+Η μεταβολή της μάζας 
+%που θα "ακτινοβοληθεί" παραμετρικοποιείται ακολούθως 
+δίδεται συναρτήσει της θερμοκρασίας της μελανής οπής από τη σχέση
+\begin{equation}\label{small mass above extremality in terms of temperature}
+    \de M \sim \frac{2\pi\superscr{\frac{7}{2}}G\superscr{\frac{1}{2}}Q\superscr{3}}{e\superscr{3}}T\superscr{2}
+\end{equation}
+%Στην πραγματικότητα, η οπή δεν χάνει μάζα μόνο υπό τη μορφή %ακτινοβολίας αλλά, 
+'Οπως θα δούμε στη συνέχεια, η εξαΰλωση της μελανής οπής ενισχύεται όταν η ένταση του μαγνητικού πεδίου στην περιοχή του ορίζοντα υπερβεί μια οριακή τιμή που καθορίζεται από τη μάζα του μποζονίου Higgs.
+%από άμαζα φερμιόνια, δεδομένου ότι το μαγνητικό πεδίο στο %εξωτερικό έχει ένταση $|F|$ μεγαλύτερο του κατώτατου ορίου %$m\subscr{h}\superscr{2}$ (μάζα μποζονίου Higgs).

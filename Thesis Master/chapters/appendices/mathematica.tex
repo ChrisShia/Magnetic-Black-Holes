@@ -1,0 +1,100 @@
+\newpage
+\chapter{Τανυστικές εξισώσεις στη Mathematica}\label{mathematica}
+
+\begin{mathematica}[Ορισμός Διανύσματος θέσης, μετρικής, αντιστρόφου]\label{mathematica_position_n_metric}
+\begin{lstlisting}[language=mathematica]
+    x = {t, r, θ, φ};
+    g = {{-Exp[2a[r]],0,0,0}, 
+            {0,Exp[2b[r]],0,0}, 
+                {0,0,r^2,0},
+                    {0,0,0,r^2*Sin[ θ ]^2}};
+    ginv = Simplify[Inverse[g]];
+\end{lstlisting}
+\end{mathematica}
+
+\begin{mathematica}[Σύμβολα Christoffel]\label{mathematica_chr_symbols}
+\begin{lstlisting}[language=mathematica]
+    CS = Simplify[Table[1/2 (
+       Sum[
+        ginv[[i,z]]*D[g[[j,z]],x[[k]]],{z,4}] 
+      +Sum[
+        ginv[[i,z]]*D[g[[k,z]],x[[j]]],{z,4}]
+      -Sum[
+        ginv[[i,z]]*D[g[[j,k]],x[[z]]],{z,4}]),
+        {i,4}, {j,4}, {k,4}
+    ]];
+\end{lstlisting}
+\end{mathematica}
+
+\begin{mathematica}[Τανυστής Riemann]\label{mathematica_Riemann}
+\begin{lstlisting}[language=mathematica]
+    Riemmann = Simplify[Table[
+        D[ CS[[i, j, z]], x[[k]]] 
+      +Sum[ CS[[i,k,s]]
+        * CS[[s,j,z]], {s,4}] 
+      -Sum[ CS[[i,z,s]]
+        * CS[[s,j,k]], {s,4}],
+      {i,4}, {j,4}, {k,4}, {z,4}
+    ]];
+\end{lstlisting}
+\end{mathematica}
+
+\begin{mathematica}[Τανυστής Ricci]\label{mathematica_Ricci}
+\begin{lstlisting}[language=mathematica]
+    Ricci = Simplify[Table[
+        Sum[
+         Riemmann[[i,j,i,z]], {i,4}], 
+        {j,4}, {z,4}
+    ]]; 
+\end{lstlisting}
+\end{mathematica}
+
+\newpage
+\begin{mathematica}[Ηλεκτροματνητικός Τανυστής]\label{mathematica_emtensor}
+\begin{lstlisting}[language=mathematica]
+    F = Table[0,{i,4},{i,4}];
+    B[r_] := Q/(2er^2); 
+    F[[3,4]] = Q/(2e)*Sin[ θ ];
+    F[[4,3]] = -Q/(2e)*Sin[ θ ];
+\end{lstlisting}
+\end{mathematica}
+
+\begin{mathematica}[Τανυστής ενέργειας-ορμής]\label{mathematica energy momentum tensor}
+\begin{lstlisting}[language=mathematica]
+    EnergyTensor = Simplify[Table[
+    Sum[F[[i, k]]*F[[j,z]]*ginv[[k,z]],{k,4},{z,4}] 
+    - 1/4 g[[i,j]]*Sum[
+        F[[i,j]]*F[[m,n]]*ginv[[m,i]] ginv[[n,j]], 
+        {i,4},{j,4},{m,4},{n,4}], 
+    {i,4}, {j,4}]];
+\end{lstlisting}
+\end{mathematica}
+
+\begin{mathematica}[Ίχνος τανυστή ενέργειας-ορμής]\label{mathematica trace of ene mom ten}
+\begin{lstlisting}[language=mathematica]
+    Ttrace = Simplify[
+        Sum[
+            ginv[[i,j]]*EnergyTensor[[i,j]],{i,4},{j,4}]
+    ];
+\end{lstlisting}
+\end{mathematica}
+
+\begin{mathematica}[Δεξιό σκέλος εξίσωσης Einstein]\label{mathematica rs of einstein eq}
+\begin{lstlisting}[language=mathematica]
+    T = Simplify[Table[
+        EnergyTensor[[i,j]] - 1/2Ttrace*g[[i,j]],{i,4},{j,4}]
+    ];
+\end{lstlisting}
+\end{mathematica}
+
+\begin{mathematica}[Εξισώσεις Einstein]\label{mathematica system of einstein equations}
+\begin{lstlisting}[language=mathematica]
+    For[i = 1, i <= 4, i++, 
+        For[j = 1, j <= 4, j++, 
+            If[PossibleZeroQ[Ricci[[i, j]]], Null, 
+                Print["{", x[[i]], x[[j]], "}", ":", 
+                    Simplify[
+                        Ricci[[i, j]] - 8*Pi*G*T[[i, j]] == 0
+                    ]]]]]
+\end{lstlisting}
+\end{mathematica}

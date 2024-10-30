@@ -1,0 +1,64 @@
+\documentclass{tstextbook}
+
+\begin{document}
+\sloppy %added by me to decrease the spillage of words over the right margin of paragraphs.
+\tsbook{Μαγνητικές Μελανές Οπές}
+       {Χρίστος Σιακάς}
+       {Τμήμα Φυσικής}
+       {Διατριβή Master}
+       {Νικόλαος Τούμπας}
+%       {Cover Designer}
+%       {2017}
+%       {xxxxx}{xxx--xx--xxxx--xx--x}{0.0}
+%       {Publisher}
+%       {Βόλος}
+
+%---------------------------------------------------------------------------
+% Chapters
+%---------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------
+\chapter{Εισαγωγή}
+%\epigraph{}
+\input{chapters/0introduction/intro}
+%---------------------------------------------------------------------------
+\chapter{Μαγνητικό Μονόπολο}
+\input{chapters/chapter2/electromag}
+\input{chapters/chapter2/monopole}
+%---------------------------------------------------------------------------
+\chapter{Τανυστικός λογισμός}\label{chaptertensorcal}
+\input{chapters/chapter3/tensorcal}
+%---------------------------------------------------------------------------
+\chapter{Βαρύτητα}
+\input{chapters/chapter4/einsteineq}
+%---------------------------------------------------------------------------
+\chapter{Σφαιρικό πρόβλημα Landau}
+\input{chapters/chapter5_spherical_landau/spherical_landau}
+%---------------------------------------------------------------------------
+\chapter{Καθιερωμένο Πρότυπο}
+\input{chapters/chapter6/symmetrygroup}
+%---------------------------------------------------------------------------
+\chapter{Επαναφορά EW Συμμετρίας}\label{chapter symmetry restoration}
+\input{chapters/chapter7/symetryrestored}
+%---------------------------------------------------------------------------
+\chapter{Επίλογος}
+\input{chapters/epilogue/epilogue}
+%---------------------------------------------------------------------------
+\appendix
+\input{chapters/appendices/proofs}
+\input{chapters/appendices/mathematica}
+%---------------------------------------------------------------------------
+% Bibliography
+%---------------------------------------------------------------------------
+
+%\addcontentsline{toc}{chapter}{\textcolor{tssteelblue}{Literature}}
+\begin{english}
+\printbibliography[title={\begin{greek}Βιβλιογραφία\end{greek}}]
+\end{english}
+%---------------------------------------------------------------------------
+% Index
+%---------------------------------------------------------------------------
+
+%\printindex
+
+\end{document}
